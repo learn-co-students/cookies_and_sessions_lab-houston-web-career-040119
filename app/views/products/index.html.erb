@@ -1,5 +1,5 @@
 <ul>
-<% session[:cart].each do |prod| %>  
+<% (session[:cart] || []).each do |prod| %>  
   <li><%= prod %></li>
 <% end %>
 </ul>
