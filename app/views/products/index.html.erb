@@ -1,0 +1,11 @@
+<ul>
+<% (session[:cart] || []).each do |prod| %>  
+  <li><%= prod %></li>
+<% end %>
+</ul>
+
+<div>
+<%= form_tag '/', method: :post  do %>
+<%= text_field_tag :product %> <%= submit_tag "add to cart" %>
+<% end %>
+</div>
